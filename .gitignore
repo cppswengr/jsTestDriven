@@ -133,3 +133,6 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+# Project Resources that should not be part of version control
+bookSource/
+
