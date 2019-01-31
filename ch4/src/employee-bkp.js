@@ -61,28 +61,3 @@ Employee.prototype.getDetails = function() {
       this.getDepartment() + '\nGrade: ' + this.getGrade() +
       '\nSalary: ' + this.getSalary();
 };
-
-Employee.prototype.markAttendance = function(status) {
-  this.attendanceStatus = status;
-};
-
-/**
- *
- * @returns {status}
- */
-Employee.prototype.getAttendance = function() {
-  return this.attendanceStatus;
-};
-
-Employee.prototype.setEmail = function(email) {
-  this.email = email;
-};
-
-/**
- *
- * @returns {email}
- */
-Employee.prototype.getEmail = function() {
-  return this.email;
-};
-
