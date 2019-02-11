@@ -1,7 +1,27 @@
 {
-  "name": "jsTestDriven",
-  "version": "1.0.0",
-  "dependencies": {
-    
-  }
+    "name": "jsTestDriven",
+    "version": "1.0.0",
+    "dependencies": {},
+    "scripts": {
+        "build": "babel src -d out",
+        "eslint": "eslint src",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "eslintConfig": {
+        "parserOptions": {
+            "ecmaVersion": 2017,
+            "sourceType": "module"
+        },
+        "env": {
+            "browser": true,
+            "node": true
+        },
+        "extends": "eslint:recommended",
+        "rules": {}
+    },
+    "devDependencies": {
+        "babel-preset-flow": "^6.23.0",
+        "eslint-plugin-flowtype": "^3.2.1",
+        "flow-bin": "^0.92.1"
+    }
 }

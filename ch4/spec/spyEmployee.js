@@ -1,5 +1,4 @@
 describe("Jasmine Spy", function() {
-
   it("Spying employee", function() {
     var alice = new Employee("Alice", 4, "Testing");
 
@@ -34,7 +33,6 @@ describe("Jasmine Spy", function() {
 
     expect(alice.calculateSalary).toHaveBeenCalled();
     expect(alice.calculateSalary()).toEqual(9999);
-
   });
 
   it("Spying employee with a fake call", function() {
@@ -48,7 +46,6 @@ describe("Jasmine Spy", function() {
     var salary = alice.calculateSalary(10);
     expect(alice.calculateSalary).toHaveBeenCalled();
     expect(salary).toEqual(10000);
-
   });
 
   it("Spying employee with a throw error", function() {
@@ -57,7 +54,6 @@ describe("Jasmine Spy", function() {
     spyOn(alice, "calculateSalary").and.throwError("Service is down");
 
     expect(alice.calculateSalary).toThrowError("Service is down");
-
   });
 
   it("Spying employee with call through and stub", function() {
@@ -69,13 +65,12 @@ describe("Jasmine Spy", function() {
 
     console.log("Now calling stub");
     alice.calculateSalary.and.stub();
-
   });
 
-  it("Tracking spies with calls property",function(){
+  it("Tracking spies with calls property", function() {
     var alice = new Employee("Alice", 4, "Testing");
 
-    spyOn(alice,"calculateSalary").and.callThrough();
+    spyOn(alice, "calculateSalary").and.callThrough();
     var salary = alice.getSalary(); // calls calculateSalary
 
     alice.calculateSalary.and.stub();
@@ -98,13 +93,12 @@ describe("Jasmine Spy", function() {
     // returns array [1000]
     console.log(alice.calculateSalary.calls.argsFor(1));
 
-
     expect(alice.calculateSalary.calls.argsFor(1)).toEqual([1000]);
 
     // returns [[], [1000]]
     console.log(alice.calculateSalary.calls.allArgs());
 
-    expect(alice.calculateSalary.calls.allArgs()).toEqual([[4],[1000]]);
+    expect(alice.calculateSalary.calls.allArgs()).toEqual([[4], [1000]]);
 
     // returns objects
     console.log(alice.calculateSalary.calls.all());
@@ -115,7 +109,5 @@ describe("Jasmine Spy", function() {
     alice.calculateSalary.calls.reset();
 
     expect(alice.calculateSalary.calls.any()).toEqual(false);
-
   });
-
 });

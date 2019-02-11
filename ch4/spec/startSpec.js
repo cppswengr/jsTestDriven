@@ -7,5 +7,4 @@ describe("Title of a Suite", function() {
   it("Testing the add() function", function() {
     expect(add(numberA, numberB)).toEqual(5);
   });
-
 });

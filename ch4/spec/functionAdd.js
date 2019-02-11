@@ -7,5 +7,4 @@ describe("Testing Mathematic operations", function() {
   it("Spec for Add operation", function() {
     expect(add(numberA, numberB)).toEqual(5);
   });
-
 });

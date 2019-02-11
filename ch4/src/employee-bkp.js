@@ -37,7 +37,7 @@ Employee.prototype.getGrade = function() {
  * @returns {Number}
  */
 Employee.prototype.getSalary = function() {
-  if(!this.salary) {
+  if (!this.salary) {
     this.salary = this.calculateSalary(this.grade);
   }
   return this.salary;
@@ -57,7 +57,14 @@ Employee.prototype.calculateSalary = function(grade) {
  * @returns {String}
  */
 Employee.prototype.getDetails = function() {
-  return 'Employee Name: ' + this.getName() + "\nDepartment: " +
-      this.getDepartment() + '\nGrade: ' + this.getGrade() +
-      '\nSalary: ' + this.getSalary();
+  return (
+    "Employee Name: " +
+    this.getName() +
+    "\nDepartment: " +
+    this.getDepartment() +
+    "\nGrade: " +
+    this.getGrade() +
+    "\nSalary: " +
+    this.getSalary()
+  );
 };
